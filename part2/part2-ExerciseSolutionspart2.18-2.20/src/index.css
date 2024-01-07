@@ -1,7 +1,24 @@
-h1 {
-    color: green;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+ }
 
+ html,
+body {
+ 
+  height: 100%;
+}
+
+ 
+
+ .app-body{
+  background-color: #ffe3e7;
+  padding-bottom: 16rem;
+  
+ }
 
   li {
     color: rgb(39, 32, 104);
@@ -10,11 +27,507 @@ h1 {
   }
 
   .error {
-    color: red;
+    position: relative;
     background: lightgrey;
     font-size: 20px;
-    border-style: solid;
     border-radius: 5px;
-    padding: 10px;
+    padding: 1em;
     margin-bottom: 10px;
+    top: 2rem;
+    z-index: 999;    
   }
+
+  /* Navbar */
+
+  .navbar-section{    
+    background-color: #cc124a;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    width: screen;
+    padding: 0 2em;
+    font-weight: bold;
+    align-items: center;
+  
+  }
+
+  
+
+  .logo{
+    color: #4d041c;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  /* Hamburger icon */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-li span{
+  display: none;
+}
+
+
+.nav-li {
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;  
+    gap: 1rem; 
+}
+
+.nav-li ul{
+  display: flex;
+  justify-content: space-around;
+  width: 32em;
+}
+
+
+
+  .nav-li a, .nav-li li{
+    color: #cf4465;
+    cursor: pointer;
+    padding: 0.16em 0.75em;
+    transition: color 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: clamp(1em , 2vh , 2em);
+    list-style-type: none;
+  
+  }
+
+  .nav-li a:hover, .nav-li li:hover{
+    color: #f83b66;
+    
+  }
+
+  /* Homepage */
+  .homepage{
+    height:24em;
+    width: screen;
+    background-image: linear-gradient(to bottom , #581b1be6, rgba(223, 43, 85, 0.4)), url('countries.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;    
+  }
+
+  .container{
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .countria-section{
+    padding: 6rem 0 0 20em;
+    animation: 5s   slidein;
+  
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 50%;
+    }
+  
+    to {
+      margin-left: 0%;
+     
+    }
+  
+  }
+
+  .homepage h1{    
+    color: #f83b66;
+    font-size: 3em;
+
+  }
+
+  .homepage p{
+    margin-top: 1.2em;
+    font-size: larger;
+    width: 22em;
+    font-weight: bolder;
+    color:#ffe3e7; 
+    line-height:1.2;
+  }
+
+  .carousel{
+    background-color: #f73c65;
+    height: 22rem;
+    padding: 2em;
+    
+  }
+
+  .display-content  .capital{
+    margin:  0.7em 0 0 0;
+  }
+
+  .display-content ul {
+    margin:  0.7em 0 0 1em;
+    
+  }
+  
+
+  .carousel h4{
+    text-align: center;
+    align-items: center;
+    color: #030313;
+    font-size: 0.9em;
+    margin: 1em 0;
+  }
+.carousel .image div{
+  border-radius: 8px;
+}
+
+
+  .carousel .image img{
+      width: 100%;
+      aspect-ratio: 2/1;
+   
+    
+  }
+
+  .search-section {
+    text-align: center;
+    margin:  1.2rem auto;
+  }
+
+  .search-section label{
+    color: #4d041c;
+    font-weight: bold;
+  }
+
+  .search-section input[type=text]{
+    width: 28%;
+    margin-left: 0.8em;
+    height: 1.8em;
+    padding: 16px 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius:4px ;
+    outline: none;
+    border: none;
+
+    
+  }
+
+  .search-section button{
+    font-weight: bold;
+    color: #ffe3e7;
+    background-color: #4d041c;
+    height: 2.5em;
+   border: none;
+   border-top-right-radius: 4px;
+   border-bottom-right-radius:4px ;
+   padding: 8px 20px;
+   cursor: pointer;
+  }
+
+  /* info */
+  .display-content{
+    display: flex;
+    column-gap: 12rem;
+    padding: 1em 3em;
+    
+  }
+
+  .languages li{
+    list-style-type: none;
+    text-decoration: none;
+   
+  }
+
+  .capital span , .time h6{
+    color: #16165a;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .country-flag{
+    margin-top: 1em;
+    border-radius: 0.5em;
+  }
+
+   .display-content .weather{
+    margin-left: 10em;
+  }
+
+  /* footer */
+
+  .footer{
+    background-color:#4d041c;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+     
+  }
+
+  .footer-info{
+    display: flex;
+    justify-content: space-around;
+    margin: 1em 0;
+    align-items: center;
+  }
+
+  .footer-info li {
+    margin: 0.8rem 0;
+    list-style-type: none;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .footer-info  li  a{
+    text-decoration: none;
+    color: #ffc0cb;
+  }
+
+  .footer-info li a:hover{
+    color: #f83b66;
+  }
+
+  .footer-info  ul li:not(:first-child){
+   font-size: small;
+  }
+
+
+
+  .footer h6{
+   text-align: center;
+   border-top: 1px solid #ffc0cb;
+   font-size: 0.6em;
+   width: 80%;
+   margin: 0 auto;
+  color:#ffc0cb;
+  padding-top: 0.8em;
+  }
+
+   .footer .logo-footer{
+    font-size: large;
+    color: #4d041c;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: #ffc0cb;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 4px;
+  }
+
+   .footer .footer-ul-header{
+    color: #ec1656;
+    font-weight: bolder;   
+   
+  }
+
+  .btn-scrollTop{
+    position: fixed;
+    bottom: 40px;
+    font-size: 3rem;
+    z-index: 1;
+    cursor: pointer;
+    color: #030313;
+    right: 2%;
+    background: none;
+    border-radius: 50px;
+    padding: 0px;
+    border: none;
+    opacity: 0.95;
+}
+
+@media screen and (min-width: 769px) and (max-width : 1024px) {
+  .coatOfArms{
+    width: 90%;
+    height: 90%;
+  }
+
+  .display-content{
+    column-gap: 1em;
+  }
+  
+}
+
+@media screen and (max-width : 768px) {
+
+  .homepage{
+    background-position: center;
+  }
+
+  .countria-section{
+    padding: 6rem 0 0 2em;
+    animation: none;
+  
+  }
+
+  .nav-li span {
+    display: block; 
+  }
+
+  .display-content{
+    display: flex;
+    gap:1rem;
+    padding: 1em 2em;
+    font-size: 90%;
+    
+  }  
+  .carousel {
+    height: 90%;
+  }
+
+ .carousel h4{
+  font-size: 90%;
+ }
+
+  .info .country-flag{
+    width: 70%;
+  }
+
+  .coatOfArms{
+    width: 90%;
+    height: 95%;
+    
+  }
+
+
+  .nav-li{
+    display: none;
+    
+     
+  } 
+
+
+  .nav-li ul{
+
+    flex-direction: column;
+    position: fixed;
+    background-color:#030313;
+    height: 100%;
+    width:100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    justify-content: space-around;
+    /* align-items: center; */
+    
+  }
+  
+
+  .nav-li span{
+    display: block;
+    border-radius: 30%;
+    position: absolute;
+    z-index: 1000;
+    top: 1.6em; 
+    right: 1.8em; 
+    color: #cf4465;
+  }
+  
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    
+  }
+
+  
+
+  .show-nav {
+    display: block !important;
+  }
+
+  .nav-li a{
+    display: block;
+  }
+}
+
+
+
+ @media screen and (max-width: 500px) {
+  
+
+  .footer-info{
+    align-items: flex-start;  
+    padding-left: 2em;  
+    
+  }
+ }
+
+ @media screen and (max-width: 490px) {
+ .countria-section p {
+  width: 90%;
+  
+ }
+}
+ 
+
+ @media screen and (max-width: 425px) {
+
+  .homepage  .countria-section{
+    font-size: 80%;
+  }
+  .display-content{
+    column-gap: 0;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+   padding-left: -16em;
+    
+  }
+
+  .info{
+  justify-content: center;
+  align-items: center;
+  }
+
+  .country-name{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .weather{
+    column-gap: 0;
+    text-align: center; 
+    align-items: center;
+    margin: 0 10em;   
+    
+  }
+
+  .languages, .timezone{
+    text-align: center;
+  }
+
+  
+
+  .flag-section{
+    text-align: center;
+  }
+
+  .flag-section div{
+ margin:  0 auto;
+  }
+
+  .coatOfArms{
+    width: 100%;
+    height: 95%;
+   
+  }  
+
+ }
+
+ @media screen and (max-width: 364px) {
+  .countria-section p{
+    font-size: 90%;
+    width: 80%;
+   }
+
+ }
+
+
+
+

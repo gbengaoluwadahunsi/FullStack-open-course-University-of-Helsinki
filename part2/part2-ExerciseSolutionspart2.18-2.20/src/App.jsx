@@ -1,56 +1,30 @@
 
-import Content from './Content'
-import { useState } from 'react'
-import Footer from './Footer'
+import Content from './components/Content'
+import Footer from './components/Footer'
+import Navbar  from './components/Navbar'
+// import Notification from './components/Notification'
+import ScrollUp from './components/ScrollUp'
 
-// import axios from 'axios'
-// const baseUrl = 'http://localhost:3001/notes'
-
-// const getAll = () => {
-//   const request = axios.get(baseUrl)
-//   return request.then(response => response.data)
-// }
-
-// const create = newObject => {
-//   const request = axios.post(baseUrl, newObject)
-//   return request.then(response => response.data)
-// }
-
-// const update = (id, newObject) => {
-//   const request = axios.put(`${baseUrl}/${id}`, newObject)
-//   return request.then(response => response.data)
-// }
-
-// export default { 
-//   getAll: getAll, 
-//   create: create, 
-//   update: update 
-// }
-
-const Notification = ({ message }) => {
-  if (message === null) {
-    return null
-  }
-
-  return (
-    <div className='error'>
-      {message}
-    </div>
-  )
-}
 
 
 const App = () => {
-  const [errorMessage, setErrorMessage] = useState('some error happened...')
+  
   
   return  (
-    <>
-    <Notification message = {errorMessage}  setErrorMessage = {setErrorMessage}/>
-     <Content  />
-     <Footer />
-     
-                   
-    </>
+    <div className='container'>
+        <div className='app-body'>
+          <Navbar/>
+          <main className='homepage'>
+            <div className='countria-section'>
+              <h1>Countria</h1>
+              <p>Countries information,current weather forecast in a fast and exciting manner</p>
+            </div>
+          </main>
+          <Content  />        
+         </div>
+         <ScrollUp />
+         <Footer />
+    </div>
   )
 }
 
